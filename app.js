@@ -13,11 +13,11 @@ const peoplesBlock = document.querySelector('.peoples')
 const request = new XMLHttpRequest()
 request.open("GET", "data.json")
 request.setRequestHeader("Content-type", "application/json")
-request.responseType = "json" // Указываем, что ожидаем JSON-ответ
-request.send() // Отправляем запрос
+request.responseType = "json" 
+request.send() 
 
 request.addEventListener('load', () => {
-    const data = request.response; // Получаем данные из JSON-ответа
+    const data = request.response
     data.forEach((person) => {
         const div = document.createElement('div')
         div.classList.add('card')
